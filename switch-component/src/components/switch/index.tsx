@@ -1,8 +1,6 @@
 "use client";
 import { IoIosSunny } from "react-icons/io";
-
 import { LiaMoon } from "react-icons/lia";
-
 import React, { forwardRef } from "react";
 
 interface SwitchProps {
@@ -23,17 +21,16 @@ const Switch = forwardRef<HTMLInputElement, SwitchProps>(
           {...props}
         />
         <div
-          className={`w-28 p-3 rounded-full flex items-center ${
-            checked ? "bg-zinc-800" : "bg-[#FDB813]"
+          className={`w-28 p-3 rounded-full flex items-center border-2 ${
+            checked ? " border-zinc-600" : "border-[#e8d8b2]"
           }`}
         >
           <div
-            className={`w-6 h-6 rounded-full  flex items-center justify-center transform transition-transform ${
-              checked ? "translate-x-16" : "translate-x-0"
+            className={`w-6 h-6 rounded-full  flex items-center justify-center transform transition-transform  duration-300 ease-in-out ${
+              checked ? "translate-x-16" : "translate-x-0 rotate-90"
             }`}
-            style={{ transition: "transform 0.3s ease-in-out" }}
           >
-            {checked ? <LiaMoon size={24} /> : <IoIosSunny size={24} />}
+            {checked ? <LiaMoon size={28} /> : <IoIosSunny size={28} />}
           </div>
         </div>
       </label>

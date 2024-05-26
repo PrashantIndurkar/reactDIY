@@ -7,7 +7,11 @@ export default function Home() {
   const [enabled, setEnabled] = useState(false);
 
   return (
-    <div className="h-screen flex items-center justify-center">
+    <div
+      className={`flex flex-col items-center justify-center h-screen ${
+        enabled ? "bg-zinc-800" : "bg-[#FDB813]"
+      }`}
+    >
       <Switch
         checked={enabled}
         onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
